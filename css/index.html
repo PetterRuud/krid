@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="no">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Petter.me</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	
+	<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/playground/animations/animations.css" rel='stylesheet' type='text/css'>
+	<script src="js/modernizr.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+	jQuery(document).ready(function(){
+		//fancystuff
+		setFixed(this, 'body' ,135);
+		var height = jQuery(window).height() - 200;
+		jQuery('.intro > div').css('height',height+'px');
+	});
+	
+    
+	jQuery(window).resize(function(){
+		var height = jQuery(window).height() - 200;
+		jQuery('.intro > div').css('height',height+'px');
+	});
+	
+	function setFixed(target, fixedClass, whentofixed) {
+    	jQuery(window).scroll(function(){
+        	if (jQuery(target).scrollTop() > whentofixed) {
+            	jQuery(fixedClass).addClass('fixed-page');
+			} else {
+             	jQuery(fixedClass).removeClass('fixed-page');
+			}
+		});
+	}
+	</script>
+</head>
+<body>
+<div id="page">
+	<div class="hero"><div class="wrap">
+		<a class="logo animate" data-animate="fadeIn" href="/" title="Petter Ruud"><img src="logo.png" alt="petter.me logo" /></a></div>
+	</div>
+	
+	<div class="intro">
+		<div class="introinner wrap animate" data-animate="bounceIn">
+			<h1>
+			Wordpress, .Net, PHP, CSS, HTML, jQuery, Webdesign
+			</h1>
+			<a href="#contactform" title="Kontakt" class="button btn-blue">Si hallo</a>
+		</div>
+	</div><!-- end intro -->
+	
+	<!-- me -->
+	<div class="wrap wrap-about"><div class="sectioninner clearfix animate" data-animate="fadeInUp">
+		<div class="me"><img src="me.jpg" alt="Petter" /></div>
+		<h2 class="textcenter">Om Petter</h2>
+		<hr />
+		<div class="col6 offset3">
+			<p>
+			Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer.
+			</p>
+				
+			<p>
+			Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.
+			</p>
+		</div>
+	</div>
+	</div><!-- end me -->
+	
+	<!-- kreatif -->
+	<div class="wrap-dark"><div class="wrap"><div class="sectioninner clearfix">
+		<div class="col6 animate" data-animate="bounceInLeft">
+			<h1>Kréatif</h1>
+			<h2>Systemutvikler - 2013 - nåværende</h2>
+			<p>Kréatif utvikler nettløsninger for alle type bedrifter og til alle type enheter. Med sterkt fokus på kundens ønsker, behov og brukeropplevelser har vi gjennom mange år opparbeidet god forståelse for hva som gir suksess innen digital kommunikasjon.</p>
+		</div>
+		<div class="col3 offset3 animate" data-animate="bounceInRight">
+			<img src="logo_kreatif.png" alt="Kreatif logo" title="Kreatif" class="logo-kreatif"/>
+		</div>
+	</div></div></div><!-- end kreatif -->
+	
+	<!-- cp -->
+	<div class="wrap-light"><div class="wrap"><div class="sectioninner clearfix">
+		<div class="col3 animate" data-animate="bounceInLeft">
+			<img src="logo_cp.png" alt="custompublish Logo" title="CustomPublish" class="logo-cp"/>
+		</div>
+		<div class="col6 offset3 animate" data-animate="bounceInRight">
+			<h1>CustomPublish</h1>
+			<h2>Frontendutvikler/Webdesigner - 2009 - 2013</h2>
+			<p>CustomPublish AS leverer standardiserte webbaserte løsninger med hovedvekt på portalløsninger og publiseringssystemer for nettsider (Content Management System - CMS). </p>
+		</div>
+	</div></div></div><!-- end cp -->
+	
+	<!-- dogme -->
+	<div class="wrap-default"><div class="wrap"><div class="sectioninner clearfix">
+		<div class="col6 animate" data-animate="bounceInLeft">
+			<h1>Dogme</h1>
+			<h2>Head of Design & Aesthetics - 2007 - 2009</h2>
+			<p>Dogme startet med tre unge menns ønske om å bedre brukervennligheten og profilene til små firma på Internett,
+den typen firma som ikke har råd til å smelle de helt store beløpene på bordet for å få en ny, god og ordentlig presentasjon av seg og sitt på verdensveven.</p>
+		</div>
+		<div class="col3 offset3 animate" data-animate="bounceInRight">
+			<img src="logo_dogme.png" alt="Dogme logo" title="Dogme" class="logo-dogme"/>
+		</div>
+	</div></div></div><!-- end dogme -->
+	
+	<!-- krid -->
+	<div class="wrap-green"><div class="wrap"><div class="sectioninner clearfix">
+		<div class="col6 offset3 animate textcenter clearfix floatnone" data-animate="bounceInRight">
+			<h1>Krid</h1>
+			<h2>A responsive grid system</h2>
+			<p>Krid uses the simpliest concepts of css3 that I cant believe was a standard from the beginning, box-sizing. And with the power of LESS, you can simply say how many column you want, how big the gutters you want aswell as if you want fluid or fixed columns.</p>
+		</div>
+		<div class="textcenter"><a href="/krid/" title="Krid" class="button">Les mer</a></div>
+	</div></div></div><!-- end krid -->
+	
+	<!-- playground -->
+	<div class="wrap-red"><div class="wrap"><div class="sectioninner clearfix">
+		<div class="col12 clearfix textcenter animate" data-animate="fadeInUp">
+			<h1>Playground</h1>
+			<h2>Diverse scripts &amp; andre småprosjekter</h2>
+		</div>
+		<div class="textcenter"><a href="/playground/" title="Besøk siden" class="button">Besøk siden</a></div>
+	</div></div></div><!-- end playground -->
+	
+	<!-- work -->
+	<div class="wrap-grey"><div class="wrap"><div class="sectioninner">
+		<h2 class="textcenter">Arbeid</h2>
+		<hr />
+		<div class="clearfix"></div>
+		<div class="textcenter"><a href="#" title="Se fler" class="button btn-dark">Se flere</a></div>
+	</div></div></div><!-- end workd -->
+	
+	<!-- contact -->
+	<div class="wrap"><div class="sectioninner clearfix">
+		<h2 class="textcenter">Si hallo?</h2>
+		<hr />
+		<div id="response" class="textcenter"></div>
+		    <form id="contactform" method="get" action="form.php" class="col8 offset2 ">
+		    	<div class="col4">
+		    		<input type="text" placeholder="Navn" required="required" name="name"/>
+		    		<input type="email" placeholder="E-post" required="required" name="email"/>
+		    		<input type="text" placeholder="Emne" name="subject"/>
+		    	</div>
+		    	<div class="col8"><textarea placeholder="Din beskjed" name="message"></textarea></div>
+		    	<div class=""><input type="submit" value="Send" class="button btn-dark" /></div>
+		    
+		    </form>
+		</div>
+	</div><!-- end contact -->
+	
+	<!-- copy -->
+	<div class="wrap"><div class="sectioninner">
+		<hr />
+		<div class="copy textcenter">&copy; Petter Ruud</div>
+	</div></div><!-- end copy -->
+	
+</div><!-- end page -->
+<script type="text/javascript" src="/playground/animations/jquery.waypoints.js"></script>
+<script src="js/jquery.form.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+	
+		jQuery('#contactform').on('submit', function(e) {
+			e.preventDefault();
+            jQuery(this).ajaxSubmit({
+                target: '#response',
+                resetForm: true,
+                success: function() { 
+				} 
+            });
+        });
+
+		if (!Modernizr.touch) {
+			jQuery(".animate").waypoint(function(direction) {
+				var animation = jQuery(this).attr("data-animate");
+					
+				if (direction == 'down') {
+						jQuery(this).addClass(animation);
+						jQuery(this).addClass('animated');
+				}
+				else {
+						jQuery(this).removeClass(animation);
+						jQuery(this).removeClass('animated');
+				}
+			}, { offset: '100%' });
+					
+			var ww = jQuery(window).width();
+			if(ww < 992) {
+					jQuery.waypoints('disable');
+			};
+		}
+	});
+	</script>
+</body>
+</html>

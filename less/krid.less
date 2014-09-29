@@ -1,0 +1,128 @@
+/*-----------------------------------------------------------------------------------*/
+/* 	KRID magic
+/*	start the magic, create the baconsandwich
+/*-----------------------------------------------------------------------------------*/
+.col {
+	float: left;
+	//display: inline-block;
+	padding-right: @col-padding-right;
+	padding-left: @col-padding-left;
+	margin-bottom: @gutter;
+	min-height: 1px;
+}
+//desktop
+.generate-grid() {
+	.setGrid(@index) when (@index >= 1) {
+		.setGridInner(@index);
+		.setGridInner(@j) when ( @j >= 1) {
+			.@{col-identifier}-@{j}-@{index} {
+				width: ( (@rowWidth / @index) * @j );
+				&:extend(.col);
+			}
+			.setGridInner(@j - 1);
+		}
+		.setGrid(@index - 1);
+	}
+	// run set-grid
+	.setGrid(@num-cols);
+}
+// create the grid
+.generate-grid();
+
+//offset 
+@media @desktop, @desktop-xl {
+	.generate-offset() {
+		.setGrid(@index) when (@index >= 1) {
+			.setGridInner(@index);
+			.setGridInner(@j) when ( @j >= 1) {
+				.@{col-offset-identifier}-@{index} {
+					margin-left: ( (@col-unit * @index) );
+				}
+			}
+			.setGrid(@index - 1);
+		}
+		// run set-grid
+		.setGrid(@num-cols);
+	}
+	.generate-offset();
+}
+//tablet
+.generate-tablet-grid() {
+	.setGrid(@index) when (@index >= 1) {
+		.setGridInner(@index);
+		.setGridInner(@j) when ( @j >= 1) {
+			.@{col-identifier-tablet}-@{j}-@{index} {
+				width: ( (@rowWidth / @index) * @j );
+				&:extend(.col);
+			}
+			.setGridInner(@j - 1);
+		}
+		.setGrid(@index - 1);
+	}
+	// run set-grid
+	.setGrid(@num-cols-tablet);
+}
+// create the grid
+@media @tablet {
+	.generate-tablet-grid();
+}
+//mobile
+.generate-mobile-grid() {
+	.setGrid(@index) when (@index >= 1) {
+		.setGridInner(@index);
+		.setGridInner(@j) when ( @j >= 1) {
+			.@{col-identifier-mobile}-@{j}-@{index} {
+				width: ( (@rowWidth / @index) * @j );
+				&:extend(.col);
+			}
+			.setGridInner(@j - 1);
+		}
+		.setGrid(@index - 1);
+	}
+	// run set-grid
+	.setGrid(@num-cols-mobile);
+}
+// create the grid
+@media @mobile {
+	.generate-mobile-grid();
+}
+.col-first {
+	padding-left: 0;
+}
+.col-last {
+	float: right;
+}
+.stretch {
+	padding-left: 0;
+	padding-right: 0;
+}
+.nomargin {
+	margin: 0;
+}
+.floatnone{
+	float: none;
+}
+.tablet-hide {
+	@media @tablet{
+		display: none;
+	}
+}
+.mobile-hide {
+	@media @mobile{
+		display: none;
+	}
+}
+/*-----------------------------------------------------------------------------------*/
+/* Units
+/*-----------------------------------------------------------------------------------*/
+.units2 .unit:nth-child(2n+1),
+.units3 .unit:nth-child(3n+4),
+.units4 .unit:nth-child(4n+5),
+.units5 .unit:nth-child(5n+6),
+.units6 .unit:nth-child(6n+7),
+.units7 .unit:nth-child(7n+8) {
+	clear: none;
+	@media @tablet, @desktop, @desktop-xl {
+		clear: both;
+	}
+}

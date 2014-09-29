@@ -1,0 +1,38 @@
+/*-----------------------------------------------------------------------------------*/
+/* Print
+/*-----------------------------------------------------------------------------------*/
+
+@media print {
+	* {
+		background-color: #FFFFFF !important;
+		background-image: none !important;
+		border-color: #666666 !important;
+		color: #000000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+		text-align: left !important;
+	}
+	body {
+		font-size: 11pt;
+		font-family: Georgia, "DejaVu Serif", "Bitstream Vera Serif", "Times New Roman", "Liberation Serif", Times, Serif !important;
+	}
+	#header, #footer {
+		display: none !important;
+	}
+	#page{
+		border: none !important;
+		min-width: 0 !important;
+		float: none !important;
+		width: auto !important;
+	}
+	th {
+		background-color: #CCCCCC !important;
+		color: #000000 !important;
+	}
+	tr:nth-child(2n+1) {
+		background-color: #DEDEDE !important;
+	}
+	tr:nth-child(2n+1) {
+		background-color: transparent !important;
+	}
+}

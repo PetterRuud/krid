@@ -1,0 +1,103 @@
+/*-----------------------------------------------------------------------------------*/
+/* MIXINS
+/*-----------------------------------------------------------------------------------*/
+
+// Clearfix
+.clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// IE7 inline-block
+.ie7-inline-block() {
+	*display: inline; /* IE7 inline-block hack */
+	*zoom: 1;
+	stop: being-broken;
+}
+
+// CSS3 PROPERTIES
+.rounded(@radius: 4px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+
+// Transitions
+.transition(@what: all, @time: 0.2s, @transition: ease-in-out) {
+	-webkit-transition: @what @time @transition;
+	-moz-transition:    @what @time @transition;
+	-ms-transition:     @what @time @transition;
+	-o-transition:      @what @time @transition;
+	transition:         @what @time @transition;
+}
+
+// Box sizing
+.box-sizing(@boxmodel) {
+	-webkit-box-sizing: @boxmodel;
+	-moz-box-sizing: @boxmodel;
+	-ms-box-sizing: @boxmodel;
+	box-sizing: @boxmodel;
+}
+
+// Placeholder text
+.placeholder(@color: @input-color-placeholder) {
+	&:-moz-placeholder            { color: @color; } // Firefox 4-18
+  	&::-moz-placeholder           { color: @color; } // Firefox 19+
+  	&:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  	&::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+
+// CSS3 Content Columns
+.content-columns(@columnCount, @columnGap: @col-margin-right) {
+	-webkit-column-count: @columnCount;
+	-moz-column-count: @columnCount;
+	column-count: @columnCount;
+	-webkit-column-gap: @columnGap;
+	-moz-column-gap: @columnGap;
+	column-gap: @columnGap;
+}
+
+// Opacity
+.opacity(@opacity) {
+	opacity: @opacity / 100;
+	filter: ~"alpha(opacity=@{opacity})";
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{opacity})";
+}
+
+// center something vertical and horizontal
+.centerer() {
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.include-custom-font(@family: arial, @font-file, @weight: normal, @style: normal){
+    @font-face{
+        font-family: @family;
+        src:url('@{font-file}.eot');
+        src:url('@{font-file}.eot?#iefix') format('embedded-opentype'),
+            url('@{font-file}.woff') format('woff'),
+            url('@{font-file}.ttf') format('truetype'),
+            url('@{font-file}.svg#icon') format('svg');
+        font-weight: @weight;
+        font-style: @style;
+    }
+}
+
+
+// remove browser specific styles
+.appearance(@argument:none) {
+	-webkit-appearance: @argument;
+	-moz-appearance: @argument;
+	appearance: @argument;
+}

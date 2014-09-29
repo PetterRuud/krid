@@ -1,0 +1,1380 @@
+/*-----------------------------------------------------------------------------------*/
+/* Demo
+/*-----------------------------------------------------------------------------------*/
+
+.header {
+	background-color: @teal;
+	color: @white;
+	padding: 115px 16px 0;
+
+	a {
+		color: @white;
+	}
+	&.header-sticky {
+		box-shadow: 0 2px 5px rgba(0,0,0,.26);
+		left: 0;
+		right: 0;
+		top: -140px;
+		@media @mobile {
+			top: -110px;
+		}
+		z-index: 1;
+		position: fixed;
+		//padding-left: 0;
+		@media @mobile {
+			.section {
+				padding: 10px 0;
+			}
+		}
+		
+		h1 {
+			float: left;
+			@media @mobile {
+				float: none;
+				font-size: 1.4em;
+				margin-bottom: 5px;
+			}
+		}
+		p {
+			float: right;
+			margin-top: 20px;
+			@media @mobile {
+				float: none;
+				font-size: 0.8em;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.box {
+	background-color: lighten(@grey, 0%);
+	border: 1px solid darken(@grey, 10%);
+	color: @black;
+	padding: 10px;
+	word-wrap: break-word;
+	.rounded(3px);
+}
+.section-header {
+	border-bottom: 1px solid darken(@grey, 10%);
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	h3 {
+		
+	}
+	.excerpt {
+		font-size: 1.2em;
+	}
+}
+
+
+.color-palette {
+	.color-group {
+		margin-bottom: 10px;
+		li {
+			padding: 15px;
+			&.main-color {
+				.name {
+					display: block;
+					margin-bottom: 60px;
+				}
+			}
+		}
+		.light {
+			color: @white;
+		}
+		.dark {
+			color: @black;
+		}
+		.hex {
+			float: right;
+		}
+	}
+}
+
+.red {
+	li {
+		background-color: @red;
+		&.light50 {
+			background-color: lighten(@red, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@red, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@red, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@red, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@red, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@red, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@red, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@red, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@red, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@red, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@red, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@red, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@red, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@red, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@red, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@red, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@red, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@red, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@red, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@red, 50%);
+		}
+	}
+}
+
+.pink {
+	li {
+		background-color: @pink;
+		&.light50 {
+			background-color: lighten(@pink, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@pink, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@pink, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@pink, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@pink, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@pink, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@pink, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@pink, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@pink, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@pink, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@pink, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@pink, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@pink, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@pink, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@pink, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@pink, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@pink, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@pink, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@pink, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@pink, 50%);
+		}
+	}
+}
+
+.purple {
+	li {
+		background-color: @purple;
+		&.light50 {
+			background-color: lighten(@purple, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@purple, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@purple, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@purple, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@purple, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@purple, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@purple, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@purple, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@purple, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@purple, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@purple, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@purple, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@purple, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@purple, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@purple, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@purple, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@purple, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@purple, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@purple, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@purple, 50%);
+		}
+	}
+}
+
+.deeppurple {
+	li {
+		background-color: @deeppurple;
+		&.light50 {
+			background-color: lighten(@deeppurple, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@deeppurple, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@deeppurple, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@deeppurple, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@deeppurple, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@deeppurple, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@deeppurple, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@deeppurple, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@deeppurple, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@deeppurple, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@deeppurple, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@deeppurple, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@deeppurple, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@deeppurple, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@deeppurple, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@deeppurple, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@deeppurple, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@deeppurple, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@deeppurple, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@deeppurple, 50%);
+		}
+	}
+}
+
+.indigo {
+	li {
+		background-color: @indigo;
+		&.light50 {
+			background-color: lighten(@indigo, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@indigo, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@indigo, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@indigo, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@indigo, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@indigo, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@indigo, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@indigo, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@indigo, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@indigo, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@indigo, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@indigo, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@indigo, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@indigo, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@indigo, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@indigo, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@indigo, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@indigo, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@indigo, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@indigo, 50%);
+		}
+	}
+}
+
+.blue {
+	li {
+		background-color: @blue;
+		&.light50 {
+			background-color: lighten(@blue, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@blue, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@blue, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@blue, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@blue, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@blue, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@blue, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@blue, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@blue, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@blue, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@blue, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@blue, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@blue, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@blue, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@blue, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@blue, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@blue, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@blue, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@blue, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@blue, 50%);
+		}
+		&.dark55 {
+			background-color: darken(@blue, 55%);
+		}
+		&.dark60 {
+			background-color: darken(@blue, 60%);
+		}
+	}
+}
+
+.lightblue {
+	li {
+		background-color: @lightblue;
+		&.light50 {
+			background-color: lighten(@lightblue, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@lightblue, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@lightblue, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@lightblue, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@lightblue, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@lightblue, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@lightblue, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@lightblue, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@lightblue, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@lightblue, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@lightblue, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@lightblue, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@lightblue, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@lightblue, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@lightblue, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@lightblue, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@lightblue, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@lightblue, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@lightblue, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@lightblue, 50%);
+		}
+	}
+}
+
+.cyan {
+	li {
+		background-color: @cyan;
+		&.light55 {
+			background-color: lighten(@cyan, 55%);
+		}
+		&.light50 {
+			background-color: lighten(@cyan, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@cyan, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@cyan, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@cyan, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@cyan, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@cyan, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@cyan, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@cyan, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@cyan, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@cyan, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@cyan, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@cyan, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@cyan, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@cyan, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@cyan, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@cyan, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@cyan, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@cyan, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@cyan, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@cyan, 50%);
+		}
+	}
+}
+
+.teal {
+	li {
+		background-color: @teal;
+		&.light65 {
+			background-color: lighten(@teal, 65%);
+		}
+		&.light60 {
+			background-color: lighten(@teal, 60%);
+		}
+		&.light55 {
+			background-color: lighten(@teal, 55%);
+		}
+		&.light50 {
+			background-color: lighten(@teal, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@teal, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@teal, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@teal, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@teal, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@teal, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@teal, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@teal, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@teal, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@teal, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@teal, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@teal, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@teal, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@teal, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@teal, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@teal, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@teal, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@teal, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@teal, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@teal, 50%);
+		}
+	}
+}
+
+.green {
+	li {
+		background-color: @green;
+		&.light50 {
+			background-color: lighten(@green, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@green, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@green, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@green, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@green, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@green, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@green, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@green, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@green, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@green, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@green, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@green, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@green, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@green, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@green, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@green, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@green, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@green, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@green, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@green, 50%);
+		}
+	}
+}
+
+.lightgreen {
+	li {
+		background-color: @lightgreen;
+		&.light50 {
+			background-color: lighten(@lightgreen, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@lightgreen, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@lightgreen, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@lightgreen, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@lightgreen, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@lightgreen, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@lightgreen, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@lightgreen, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@lightgreen, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@lightgreen, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@lightgreen, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@lightgreen, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@lightgreen, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@lightgreen, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@lightgreen, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@lightgreen, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@lightgreen, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@lightgreen, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@lightgreen, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@lightgreen, 50%);
+		}
+	}
+}
+
+.lime {
+	li {
+		background-color: @lime;
+		&.light50 {
+			background-color: lighten(@lime, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@lime, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@lime, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@lime, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@lime, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@lime, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@lime, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@lime, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@lime, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@lime, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@lime, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@lime, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@lime, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@lime, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@lime, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@lime, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@lime, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@lime, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@lime, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@lime, 50%);
+		}
+	}
+}
+
+.yellow {
+	li {
+		background-color: @yellow;
+		&.light50 {
+			background-color: lighten(@yellow, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@yellow, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@yellow, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@yellow, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@yellow, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@yellow, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@yellow, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@yellow, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@yellow, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@yellow, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@yellow, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@yellow, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@yellow, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@yellow, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@yellow, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@yellow, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@yellow, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@yellow, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@yellow, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@yellow, 50%);
+		}
+		&.dark55 {
+			background-color: darken(@yellow, 55%);
+		}
+		&.dark60 {
+			background-color: darken(@yellow, 60%);
+		}
+	}
+}
+
+.amber {
+	li {
+		background-color: @amber;
+		&.light50 {
+			background-color: lighten(@amber, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@amber, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@amber, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@amber, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@amber, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@amber, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@amber, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@amber, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@amber, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@amber, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@amber, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@amber, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@amber, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@amber, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@amber, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@amber, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@amber, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@amber, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@amber, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@amber, 50%);
+		}
+	}
+}
+
+.orange {
+	li {
+		background-color: @orange;
+		&.light50 {
+			background-color: lighten(@orange, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@orange, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@orange, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@orange, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@orange, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@orange, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@orange, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@orange, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@orange, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@orange, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@orange, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@orange, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@orange, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@orange, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@orange, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@orange, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@orange, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@orange, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@orange, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@orange, 50%);
+		}
+	}
+}
+
+.deeporange {
+	li {
+		background-color: @deeporange;
+		&.light50 {
+			background-color: lighten(@deeporange, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@deeporange, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@deeporange, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@deeporange, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@deeporange, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@deeporange, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@deeporange, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@deeporange, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@deeporange, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@deeporange, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@deeporange, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@deeporange, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@deeporange, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@deeporange, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@deeporange, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@deeporange, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@deeporange, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@deeporange, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@deeporange, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@deeporange, 50%);
+		}
+		&.dark55 {
+			background-color: darken(@deeporange, 55%);
+		}
+	}
+}
+
+.brown {
+	li {
+		background-color: @brown;
+		&.light60 {
+			background-color: lighten(@brown, 60%);
+		}
+		&.light55 {
+			background-color: lighten(@brown, 55%);
+		}
+		&.light50 {
+			background-color: lighten(@brown, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@brown, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@brown, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@brown, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@brown, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@brown, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@brown, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@brown, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@brown, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@brown, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@brown, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@brown, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@brown, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@brown, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@brown, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@brown, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@brown, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@brown, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@brown, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@brown, 50%);
+		}
+	}
+}
+
+.grey {
+	li {
+		background-color: @grey;
+		&.light50 {
+			background-color: lighten(@grey, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@grey, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@grey, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@grey, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@grey, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@grey, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@grey, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@grey, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@grey, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@grey, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@grey, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@grey, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@grey, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@grey, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@grey, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@grey, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@grey, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@grey, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@grey, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@grey, 50%);
+		}
+	}
+}
+
+.bluegrey {
+	li {
+		background-color: @bluegrey;
+		&.light50 {
+			background-color: lighten(@bluegrey, 50%);
+		}
+		&.light45 {
+			background-color: lighten(@bluegrey, 45%);
+		}
+		&.light40 {
+			background-color: lighten(@bluegrey, 40%);
+		}
+		&.light35 {
+			background-color: lighten(@bluegrey, 35%);
+		}
+		&.light30 {
+			background-color: lighten(@bluegrey, 30%);
+		}
+		&.light25 {
+			background-color: lighten(@bluegrey, 25%);
+		}
+		&.light20 {
+			background-color: lighten(@bluegrey, 20%);
+		}
+		&.light15 {
+			background-color: lighten(@bluegrey, 15%);
+		}
+		&.light10 {
+			background-color: lighten(@bluegrey, 10%);
+		}
+		&.light5 {
+			background-color: lighten(@bluegrey, 5%);
+		}
+		&.dark5 {
+			background-color: darken(@bluegrey, 5%);
+		}
+		&.dark10 {
+			background-color: darken(@bluegrey, 10%);
+		}
+		&.dark15 {
+			background-color: darken(@bluegrey, 15%);
+		}
+		&.dark20 {
+			background-color: darken(@bluegrey, 20%);
+		}
+		&.dark25 {
+			background-color: darken(@bluegrey, 25%);
+		}
+		&.dark30 {
+			background-color: darken(@bluegrey, 30%);
+		}
+		&.dark35 {
+			background-color: darken(@bluegrey, 35%);
+		}
+		&.dark40 {
+			background-color: darken(@bluegrey, 40%);
+		}
+		&.dark45 {
+			background-color: darken(@bluegrey, 45%);
+		}
+		&.dark50 {
+			background-color: darken(@bluegrey, 50%);
+		}
+	}
+}

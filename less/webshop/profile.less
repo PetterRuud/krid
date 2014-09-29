@@ -1,0 +1,211 @@
+//Profile
+.profile-page-header-title{
+	font-size:24px;
+	font-size:2.4rem;
+	@media @mobile{
+	font-size:20px;
+	font-size:2.0rem;
+	}
+}
+#profile-page{
+	padding-left:20px;
+	padding-right: 20px;
+}
+.list-profile-info{
+	background-color:#f6f6f6;
+	padding-top:20px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:20px;
+	@media @mobile{
+	padding-bottom:10px;
+	}
+	dt{
+		margin-bottom:0;
+		font-weight: normal;
+		clear:both;
+	}
+	dd{
+		margin-left:0;
+		margin-bottom:0;
+		@media @mobile{
+		margin-bottom:10px;
+		}
+	}	
+}
+.profile-page-header{
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:20px;
+	hr{
+		margin-left:0;
+		margin-right:0;
+		margin-top:10px;
+	}
+}
+.btn-profile-info{
+	color:@white;
+}
+.table-profile{
+	width: 100%;
+	border:1px solid #ddd;
+	border-collapse: collapse;
+	margin-bottom:20px;
+	
+	tr{
+		&:nth-child(even){
+			background-color:#f6f6f6;
+		}
+	}
+	td{
+		padding:10px;
+	}
+	td.choice{
+		width: 40px;
+		vertical-align: middle;
+		text-align: center;
+		border-right:1px solid #ddd;
+	}
+}
+//search orderhistory
+.list-searchtype-orderhistory{
+	input{
+		margin-right:10px;
+	}
+	label{
+		cursor: pointer;
+	}
+	li{
+		border-left:0;
+		&+li{
+			border-left:1px dotted #ddd;
+			padding-left:20px;
+		}
+	}
+}
+.list-searchtype-orderhistory{
+	margin-bottom:20px;
+	li{
+		margin-right:20px;
+	}
+}
+#pnlFilterParameter{
+	border:1px solid #ddd;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#txtFilterInput{
+	@media @mobile{
+	margin-bottom:10px;
+	}
+}
+.btn-orderhistory-search{
+	display: block;
+	width: 100%;
+	padding-left:0;
+	padding-right:0;
+	padding-top:12px;
+	padding-bottom:12px;
+}
+.list-searchtype-status{
+	margin-bottom:0;
+	margin-top:10px;
+	padding-left:10px;
+	li{
+		margin-right:20px;
+	}
+	label{
+		margin-left:5px;
+		cursor: pointer;
+	}
+}
+//orderhistory
+.table-orderhistory{
+	clear:both;
+	width: 100%;
+	border-collapse: collapse;
+	thead{
+		@media @mobile{
+		display: none;			
+		}
+	}
+	tbody{
+		tr{
+			&:nth-child(odd){
+				background-color:#f6f6f6; 
+				border-bottom:1px solid #fff;
+			}
+			&:nth-child(even){
+				background-color:#eee;
+			}			
+		}
+	}
+	th,td{
+		padding-top:7px;
+		padding-bottom:7px;
+		padding-left: 10px;
+		padding-right:10px;
+	}
+	th{
+		font-weight: normal;
+		color:#333;
+	}
+	td{
+		@media @mobile{
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left: 20px;
+		padding-right:20px;
+		position: relative;
+			&:before{
+				display: block;
+				color:#333;
+			}		
+		}		
+	}	
+	.order-view{
+		text-align: right;
+		@media @mobile{
+		text-align: left;
+		padding-bottom:20px;
+		
+			a{
+				border:1px solid #ddd;
+				display: block;
+				text-align: center;
+				padding-top:3px;
+				padding-bottom:3px;
+			}		
+		}	
+	}
+	.order-date{
+		@media @mobile{	
+		padding-top: 20px;
+			&:before{
+				content:'Ordre- tidspunkt';
+			}
+		}
+	}
+	.order-number{
+		@media @mobile{		
+			&:before{
+				content:'Ordrenr';
+			}
+		}			
+	}
+	.order-name{
+		@media @mobile{		
+			&:before{
+				content:'Kundenavn';
+			}
+		}		
+	}
+	.reciever-name{
+		@media @mobile{		
+			&:before{
+				content:'Varemottaker';
+			}
+		}			
+	}
+}

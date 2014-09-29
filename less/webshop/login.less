@@ -1,0 +1,62 @@
+//Login or Register
+.loginregister-box{
+	border:1px solid #ddd;
+	padding-top:20px;
+	padding-bottom:0;
+	margin-bottom:20px;
+	background-color:#fff;
+	
+	h3{
+		@media @mobile{
+		text-align: center;
+		}
+	}
+	.button{
+		padding-left:40px;
+		padding-right:40px;
+		@media @mobile{
+		display: block;
+		width: 100%;
+		}
+	}
+}
+//login
+#login-section{
+	border-color:#ddd;
+	border-style: solid;
+	
+	@media @mobile, @tablet{
+	border-width: 0 0 1px;
+	}
+	@media @desktop, @desktop-xl{
+	border-width: 0 1px 0 0;	
+	}
+}
+.login-forgot-password a{
+	cursor:help;
+}
+.login-forgottenpassword{
+	border-top:1px solid #ddd;
+	padding-top:20px;
+	
+	#txtForgottenPasswordEmail{
+		margin-bottom:20px;
+	}
+}
+
+//Register
+.register-form{
+	.button{
+		@media @mobile{
+		display: block;
+		width: 100%;	
+		}
+	}
+	.input-required{
+		background-color:@alert-yellow;
+	}
+}
+.other-deliveryinfo{
+	background-color:#eee;
+	padding:10px;
+}
